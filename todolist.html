@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/todo.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <div class="top-bar">
+    <h1>Task Manager</h1>
+    <div class="meta"><span id="count-left">0</span> remaining / <span id="count-total">0</span> total</div>
+  </div>
+
+  <!-- Add Form -->
+  <div class="add-form">
+    <input type="text" id="task-input" placeholder="Add a new task and press Enter…" maxlength="120">
+    <button onclick="addTask()">+ Add</button>
+  </div>
+
+  <!-- Filter -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all"       onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn"        data-filter="active"    onclick="setFilter('active',this)">Active</button>
+    <button class="filter-btn"        data-filter="completed" onclick="setFilter('completed',this)">Completed</button>
+  </div>
+
+  <!-- Task List -->
+  <ul class="task-list" id="task-list"></ul>
+  <div class="empty" id="empty-state">
+    <div class="empty-icon">[ ]</div>
+    <p>No tasks here.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="foot">
+    <div class="foot-left"><span id="count-done">0</span> completed</div>
+    <button class="clear-btn" onclick="clearCompleted()">Clear Completed</button>
+  </div>
+
+</div>
+
+<div class="wm"><a >codealpha</a> &nbsp;·&nbsp; localStorage + CRUD</div>
+
+<script src="js/todo.js">
+
+</script>
+</body>
+</html>

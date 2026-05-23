@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/age.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Age Calculator</h1>
+ 
+  </div>
+
+  <div class="label-row">
+    <label>Day</label>
+    <label>Month</label>
+    <label>Year</label>
+  </div>
+
+  <div class="input-row">
+    <input type="number" id="day"   placeholder="DD" min="1" max="31">
+    <input type="number" id="month" placeholder="MM" min="1" max="12">
+    <input type="number" id="year"  placeholder="YYYY" min="1900">
+  </div>
+
+  <div class="hint-row">
+    <div class="hint" id="hint-day">1 – 31</div>
+    <div class="hint" id="hint-month">1 – 12</div>
+    <div class="hint" id="hint-year">≤ 2026</div>
+  </div>
+
+  <div class="error-banner" id="error-banner"></div>
+
+  <button class="calc-btn" onclick="calculate()">Calculate Age →</button>
+
+  <div class="result" id="result">
+    <div class="result-header">Your age is</div>
+    <div class="result-grid">
+      <div class="result-item">
+        <div class="result-num" id="r-years">—</div>
+        <div class="result-unit">Years</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num" id="r-months">—</div>
+        <div class="result-unit">Months</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num" id="r-days">—</div>
+        <div class="result-unit">Days</div>
+      </div>
+    </div>
+    <div class="result-sub" id="result-sub"></div>
+  </div>
+
+  <div class="footer">
+    <a ><span class="dot"></span>codealpha</a>
+    
+  </div>
+
+</div>
+
+<script src="js/age.js">
+ 
+</script>
+</body>
+</html>
